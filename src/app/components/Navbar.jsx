@@ -11,7 +11,9 @@ function Navbar({ session }) {
         <div className="flex justify-between items-center">
           <div>
             <Link href="/">
-              <h1>Next Auth</h1>
+              <h1 className="text-3xl font-bold">
+                Nuxt Auth Innitial Repository
+              </h1>
             </Link>
           </div>
           <ul className="flex ">
