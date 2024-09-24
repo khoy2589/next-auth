@@ -11,9 +11,8 @@ function Navbar({ session }) {
         <div className="flex justify-between items-center">
           <div>
             <Link href="/">
-              <h1 className="text-3xl font-bold">
-                Nuxt Auth Innitial Repository
-              </h1>
+              <h1 className="text-3xl font-bold">This is Navbar</h1>
+              {/* // TODO: เปลี่ยนคำใน navbar ตอนที่ login กับตอนที่ไม่ได้ login */}
             </Link>
           </div>
           <ul className="flex ">

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import { useSession } from "next-auth/react";
+import page from "../store_pages/index";
 
 export default function Home() {
   const { data: session } = useSession();
