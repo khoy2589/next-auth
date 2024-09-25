@@ -3,10 +3,8 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
-import { redirect } from "next/navigation";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter, redirect } from "next/navigation";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
