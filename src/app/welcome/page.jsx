@@ -10,15 +10,15 @@ import Link from "next/link";
 import Image from "next/image";
 import UnderGo from "../../../public/assets/undergo.png";
 import default_avatar from "../../../public/assets/default_avatar.png";
+import IndexPage from "../index/Index_page";
 
 function WelcomePage() {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   console.log(session);
 
-  // if (!session) {
-  //   redirect("/login");
-  // }
-  !session ? redirect("/login") : "";
+  status === "loading" ? <li>"loading..."</li> : console.log("");
+
+  !session ? redirect("/login") : IndexPage;
 
   return (
     <div className="min-h-screen bg-gray-100">

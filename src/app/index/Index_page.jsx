@@ -4,7 +4,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { useSession } from "next-auth/react";
 
-const Index_page = () => {
+const IndexPage = () => {
   const { data: session, status } = useSession(); // Example of using useSession
 
   // You can add conditional rendering based on session status if needed
@@ -24,9 +24,9 @@ const Index_page = () => {
   return (
     <>
       <div>Welcome, {session.user?.name || "User"}!</div>
-      <div>This is the main content for authenticated users.</div>
+      <div>This is the Index page</div>
     </>
   );
 };
 
-export default Index_page; // Correct export syntax
+export default IndexPage; // Correct export syntax
