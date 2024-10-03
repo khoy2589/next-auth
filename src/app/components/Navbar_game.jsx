@@ -5,7 +5,7 @@ import { signOut, useSession } from "next-auth/react";
 import { ShoppingCart, User } from "lucide-react";
 import { Button } from "./ui/button";
 
-function Navbar_game() {
+function NavbarGame() {
   const pathname = usePathname();
   const { data: session, status } = useSession();
   const router = useRouter();
@@ -105,4 +105,4 @@ function Navbar_game() {
   );
 }
 
-export default Navbar_game;
+export default NavbarGame;

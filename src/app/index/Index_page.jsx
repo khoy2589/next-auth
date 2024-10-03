@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import Navbar_game from "@/components/Navbar_game";
+import NavbarGame from "@/components/Navbar_game";
 import { useSession } from "next-auth/react";
 
 import React, { useState, useEffect } from "react";
@@ -13,40 +13,20 @@ import GameFilter from "../components/GameFilter";
 import PopularGames from "../components/PopularGames";
 import RecommendedGames from "../components/RecommendedGames";
 
+import GameList from "@assets/GameList.json";
+
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
 
 const fetchGames = async () => {
-  // This is a mock API call. In a real application, you'd fetch from your backend.
-  return [
-    {
-      id: 1,
-      title: "Cyberpunk 2077",
-      genre: "RPG",
-      ageRating: "M",
-      price: 59.99,
-      image: "/placeholder.svg",
-    },
-    {
-      id: 2,
-      title: "The Legend of Zelda: Breath of the Wild",
-      genre: "Adventure",
-      ageRating: "E10+",
-      price: 59.99,
-      image: "/placeholder.svg",
-    },
-    {
-      id: 3,
-      title: "FIFA 23",
-      genre: "Sports",
-      ageRating: "E",
-      price: 49.99,
-      image: "/placeholder.svg",
-    },
-    // Add more game objects as needed
-  ];
+  const response = await fetch("/assets/GameList.json"); // Correct URL path
+  if (!response.ok) {
+    throw new Error("Ops, i can't fetch games");
+  }
+  const data = await response.json();
+  return data;
 };
 
 const IndexPage = () => {
@@ -69,12 +49,12 @@ const IndexPage = () => {
   }, []);
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error fetching games</div>;
+  if (error) return <div>Defect! : {error}</div>;
 
   return (
-    <>
+    <div>
       <div className="min-h-screen bg-gray-100">
-        <Navbar_game />
+        <NavbarGame />
         <main className="container mx-auto px-4 py-8">
           <HeroSection />
           <GameFilter />
@@ -82,8 +62,8 @@ const IndexPage = () => {
           <RecommendedGames games={games} />
         </main>
       </div>
-    </>
+    </div>
   );
 };
 
-export default IndexPage; // Correct export syntax
+export default IndexPage;

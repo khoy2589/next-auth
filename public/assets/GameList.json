@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Cyberpunk 2077",
+    "genre": "RPG",
+    "ageRating": "M",
+    "price": 59.99,
+    "image": "/assets/cover/UnderGo.png"
+  },
+  {
+    "id": 2,
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "genre": "Adventure",
+    "ageRating": "E10+",
+    "price": 59.99,
+    "image": "/placeholder.svg"
+  },
+  {
+    "id": 3,
+    "title": "FIFA 23",
+    "genre": "Sports",
+    "ageRating": "E",
+    "price": 49.99,
+    "image": "/placeholder.svg"
+  },
+  {
+    "id": 4,
+    "title": "Cyberpunk 2078",
+    "genre": "RPG",
+    "ageRating": "M",
+    "price": 60.99,
+    "image": "/placeholder.svg"
+  },
+  {
+    "id": 5,
+    "title": "The Legend of Zelda: Breath of the Wild Ones",
+    "genre": "Adventure",
+    "ageRating": "E10+",
+    "price": 99.99,
+    "image": "/placeholder.svg"
+  },
+  {
+    "id": 6,
+    "title": "FIFA 33",
+    "genre": "Sports",
+    "ageRating": "E",
+    "price": 69.69,
+    "image": "/placeholder.svg"
+  }
+]
