@@ -8,6 +8,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+const queryClient = new QueryClient();
+
 const GameFilter = () => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md mb-8">

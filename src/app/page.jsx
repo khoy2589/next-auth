@@ -16,7 +16,7 @@ const Index = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <IndexPage />
     </div>
   );
