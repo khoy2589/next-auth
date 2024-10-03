@@ -23,10 +23,23 @@ const queryClient = new QueryClient();
 const fetchGames = async () => {
   const response = await fetch("/assets/GameList.json"); // Correct URL path
   if (!response.ok) {
-    throw new Error("Ops, i can't fetch games");
+    throw new Error("Ops!, i can't fetch any items!");
   }
+
   const data = await response.json();
-  return data;
+
+  // Set a default image path if no image is provided
+  const updatedData = data.map((game) => ({
+    ...game,
+    image: game.image ? game.image : "/assets/cover/UnderGo.png",
+    id: game.id ? game.id : 0,
+    title: game.title ? game.title : "Undefined title",
+    ageRating: game.ageRating ? game.ageRating : "Undefined age rating",
+    price: game.price ? game.price : 0,
+    genre: game.genre ? game.genre : "Undefined genre",
+  }));
+
+  return updatedData;
 };
 
 const IndexPage = () => {

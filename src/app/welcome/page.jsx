@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 
 import Image from "next/image";
-import UnderGo from "../../../public/assets/cover/undergo.png";
+// import UnderGo from "../../../public/assets/cover/undergo.png";
 import default_avatar from "../../../public/assets/default_avatar.png";
 import IndexPage from "../index/Index_page";
 

@@ -24,7 +24,7 @@ const fetchGames = async (filters) => {
     `/api/games?genre=${genre}&ageRating=${ageRating}&mode=${mode}&minPrice=${priceRange[0]}&maxPrice=${priceRange[1]}`,
   );
   if (!response.ok) {
-    throw new Error("Network response was not ok");
+    throw new Error("Network response was not doing well!");
   }
   return response.json();
 };

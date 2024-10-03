@@ -7,6 +7,7 @@ const nextConfig = {
       ...config.resolve.alias,
       "@": path.resolve("./src/app"), // Adjusted alias pointing to 'src'
       "@assets": path.resolve("public/assets"), // Adjusted alias pointing to 'public/assets'
+      "@default_holder": path.resolve("public/assets/cover"),
     };
     return config;
   },

@@ -5,7 +5,7 @@
     "genre": "RPG",
     "ageRating": "M",
     "price": 59.99,
-    "image": "/assets/cover/UnderGo.png"
+    "image": ""
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "genre": "Adventure",
     "ageRating": "E10+",
     "price": 59.99,
-    "image": "/placeholder.svg"
+    "image": ""
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "genre": "Sports",
     "ageRating": "E",
     "price": 49.99,
-    "image": "/placeholder.svg"
+    "image": ""
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "genre": "RPG",
     "ageRating": "M",
     "price": 60.99,
-    "image": "/placeholder.svg"
+    "image": ""
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "genre": "Adventure",
     "ageRating": "E10+",
     "price": 99.99,
-    "image": "/placeholder.svg"
+    "image": ""
   },
   {
     "id": 6,
@@ -45,6 +45,6 @@
     "genre": "Sports",
     "ageRating": "E",
     "price": 69.69,
-    "image": "/placeholder.svg"
+    "image": ""
   }
 ]
