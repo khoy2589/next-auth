@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -71,7 +73,7 @@ function NavbarGame() {
     "/": "Home Page",
     "/games": "Games",
     "/about": "About Us",
-    "/contact": "Contact",
+    "/contact": "contact",
     "/login": "Login",
     "/register": "Register",
     "/welcome": "Welcome",
@@ -93,7 +95,7 @@ function NavbarGame() {
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <Link href="/games" className="hover:text-gray-300">
+              <Link href="/" className="hover:text-gray-300">
                 Games
               </Link>
             </li>

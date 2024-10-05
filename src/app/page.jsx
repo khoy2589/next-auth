@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import Navbar from "@/components/Navbar";
+// import Image from "next/image";
+// import Navbar from "@/components/Navbar";
 import { useSession } from "next-auth/react";
 
 import IndexPage from "./indexpage/Index_page";
