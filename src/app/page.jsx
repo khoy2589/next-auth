@@ -4,7 +4,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { useSession } from "next-auth/react";
 
-import IndexPage from "./index/Index_page";
+import IndexPage from "./indexpage/Index_page";
 
 const Index = () => {
   const { data: session, status } = useSession(); // Example of using useSession

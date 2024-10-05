@@ -66,7 +66,20 @@ function NavbarGame() {
     );
   }
 
-  const pageName = pathname === "/" ? "Home" : pathname.slice(1);
+  // Pathname to display name mapping
+  const pathNameMap = {
+    "/": "Home Page",
+    "/games": "Games",
+    "/about": "About Us",
+    "/contact": "Contact",
+    "/login": "Login",
+    "/register": "Register",
+    "/welcome": "Welcome",
+  };
+
+  const pageName =
+    pathNameMap[pathname] ||
+    pathname.charAt(1).toUpperCase() + pathname.slice(2);
 
   return (
     <header className="bg-gray-800 text-white">
