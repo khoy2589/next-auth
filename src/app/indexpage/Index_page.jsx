@@ -1,13 +1,13 @@
 "use client";
 
-import Image from "next/image";
-import Navbar from "@/components/Navbar";
+// import Image from "next/image";
+// import Navbar from "@/components/Navbar";
 import NavbarGame from "@/components/Navbar_game";
 import { useSession } from "next-auth/react";
 
 import React, { useState, useEffect } from "react";
 
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import GameFilter from "../components/GameFilter";
 import PopularGames from "../components/PopularGames";
@@ -17,6 +17,10 @@ import GameList from "@assets/GameList.json";
 
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 const queryClient = new QueryClient();
 
