@@ -70,7 +70,7 @@ function WelcomePage() {
                 visit:
               </p>
               <ul className="mt-6 list-disc list-inside space-y-2 text-gray-600">
-                <li>สวัสดีครับ พี่ชาย</li>
+                <li>สวัสดี {session.user.name}</li>
                 <li>ปวดหัวกับโครงสร้างเว็บนี้จังครับ</li>
                 <li>บักเยอะกว่าโค้ดอีกครับ</li>
               </ul>

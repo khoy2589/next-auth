@@ -70,11 +70,16 @@ const HeroSection = () => {
   useEffect(() => {
     const img = new Image();
     img.src = backgroundImage;
+
+    img.onload = () => {
+      // Image loaded successfully, do nothing
+    };
+
     img.onerror = () => {
       setBackgroundImage("/assets/cover/UnderGo.png");
       setIsImageError(true);
     };
-  }, []);
+  }, [backgroundImage]);
 
   return (
     <div
