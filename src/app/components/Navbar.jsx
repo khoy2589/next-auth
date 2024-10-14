@@ -16,7 +16,6 @@ function Navbar() {
   // Function to clear session history on first run
   useEffect(() => {
     const isFirstRun = localStorage.getItem("isFirstRun");
-
     if (!isFirstRun) {
       localStorage.setItem("isFirstRun", "true");
       sessionStorage.clear();
@@ -95,7 +94,9 @@ function Navbar() {
             <Link href="/">
               <h1 className="text-3xl font-bold">This is Navbar</h1>
             </Link>
-            <p className="text-l">Current Page: {pageName}</p>{" "}
+            <span className="ml-4 text-sm font-medium text-gray-300 bg-gray-700 px-3 py-1 rounded-full">
+              Current Page: {pageName}
+            </span>
             {/* Display current page name */}
           </div>
           <ul className="flex">{navLinks}</ul>

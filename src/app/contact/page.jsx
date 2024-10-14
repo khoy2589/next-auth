@@ -103,7 +103,10 @@ const contact = () => {
                     required
                   />
                 </div>
-                <ContactButton type="submit" className="w-full">
+                <ContactButton
+                  type="submit"
+                  className="w-full bg-blue-700 text-white py-2 px-3 rounded-md text-lg my-2 cursor-pointer"
+                >
                   Send Message
                 </ContactButton>
               </div>

@@ -9,10 +9,26 @@ import {
 } from "@/app/contact/components/Avatar";
 
 const teamMembers = [
-  { name: "John Doe", role: "CEO & Founder", image: "/placeholder.svg" },
-  { name: "Jane Smith", role: "Lead Developer", image: "/placeholder.svg" },
-  { name: "Mike Johnson", role: "UX Designer", image: "/placeholder.svg" },
-  { name: "Sarah Brown", role: "Marketing Manager", image: "/placeholder.svg" },
+  {
+    name: "Chanathip Khamchan",
+    role: "CEO & Founder",
+    image: "/placeholder.svg",
+  },
+  {
+    name: "Chanathip Khamchan 2",
+    role: "Lead Developer",
+    image: "/placeholder.svg",
+  },
+  {
+    name: "Chanathip Khamchan 3",
+    role: "UX Designer",
+    image: "/placeholder.svg",
+  },
+  {
+    name: "Chanathip Khamchan 4",
+    role: "Marketing Manager",
+    image: "/placeholder.svg",
+  },
 ];
 
 const about = () => {
@@ -96,8 +112,8 @@ const about = () => {
           <Card className="bg-white shadow-md">
             <CardContent className="p-6">
               <p className="text-lg italic mb-4">
-                "GameStore has revolutionized how I discover and purchase games.
-                Their recommendation engine is spot-on!"
+                &quot;GameStore has revolutionized how I discover and purchase
+                games. Their recommendation engine is spot-on!&quot;
               </p>
               <p className="text-right font-semibold">
                 - Alex G., Loyal Customer

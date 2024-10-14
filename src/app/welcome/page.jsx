@@ -66,8 +66,8 @@ function WelcomePage() {
                 {session.user.name}
               </h1>
               <p className="mt-4 max-w-2xl text-xl text-gray-500">
-                We're glad to see you again! Here's what's new since your last
-                visit:
+                We&apos;re glad to see you again! Here&apos;s what&apos;s new
+                since your last visit:
               </p>
               <ul className="mt-6 list-disc list-inside space-y-2 text-gray-600">
                 <li>สวัสดี {session.user.name}</li>

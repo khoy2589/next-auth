@@ -6,6 +6,10 @@ import Link from "next/link";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter, redirect } from "next/navigation";
 
+import { Button } from "./components/button";
+import { Input } from "./components/input";
+import { Mail, Lock, AlertCircle } from "lucide-react";
+
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -41,45 +45,80 @@ function LoginPage() {
   };
 
   return (
-    <div>
+    <div className="min-h-screen bg-gray-100">
       <Navbar />
-      <div className="container mx-auto py-5">
-        <h3>Login Page</h3>
-        <hr className="my-3" />
-        <form onSubmit={handleSubmit}>
-          {error && (
-            <div className=" bg-red-500 w-fit text-sm text-white py-1 px-3 rounded-md mt-2">
-              {error}
-            </div>
-          )}
-          <input
-            onChange={(e) => setEmail(e.target.value)}
-            className="block bg-gray-300 p-2 my-2 rounded-md"
-            type="email"
-            placeholder="Enter your email"
-          />
-          <input
-            onChange={(e) => setPassword(e.target.value)}
-            className="block bg-gray-300 p-2 my-2 rounded-md"
-            type="password"
-            placeholder="Enter your password"
-          />
-
-          <button
-            type="submit"
-            className="block bg-green-500 p-2  rounded-md text-white"
-          >
-            Sign In
-          </button>
-        </form>
-        <hr className="my-3" />
-        <p>
-          Already have an account? go to{" "}
-          <Link href="/register" className="text-blue-500 hover:underline">
-            Register
-          </Link>{" "}
-          Page
-        </p>
+      <div className="container mx-auto py-10">
+        <div className="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="px-6 py-8">
+            <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+              Log in to Your Account
+            </h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {error && (
+                <div className="flex items-center p-4 mb-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50">
+                  <AlertCircle className="flex-shrink-0 inline w-4 h-4 mr-3" />
+                  <span className="sr-only">Error</span>
+                  <div>{error}</div>
+                </div>
+              )}
+              <div className="space-y-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Email
+                </label>
+                <div className="relative">
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="pl-10"
+                    required
+                  />
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <label
+                  htmlFor="password"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Password
+                </label>
+                <div className="relative">
+                  <Input
+                    id="password"
+                    type="password"
+                    placeholder="Enter your password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="pl-10"
+                    required
+                  />
+                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                </div>
+              </div>
+              <Button
+                type="submit"
+                className="w-full bg-orange-400 text-white py-2 px-3 rounded-md text-lg my-2 cursor-pointer"
+              >
+                Sign In
+              </Button>
+            </form>
+          </div>
+          <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
+            <p className="text-sm text-center text-gray-600">
+              Don&apos;t have an account?
+              <Link
+                href="/register"
+                className="font-medium text-blue-600 hover:text-blue-500"
+              >
+                Register here
+              </Link>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ function NavbarGame() {
 
   let navLinks;
   if (status === "loading") {
-    navLinks = <li className="mx-3">Loading...</li>;
+    navLinks = <li className="mx-3">Loading your data...</li>;
   } else if (!session) {
     navLinks = (
       <>
@@ -85,7 +85,7 @@ function NavbarGame() {
 
   return (
     <header className="bg-gray-800 text-white">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-1 py-2 flex justify-between items-center">
         <div>
           <Link href="/">
             <h1 className="text-2xl font-bold">GameStore</h1>
@@ -111,7 +111,7 @@ function NavbarGame() {
             </li>
           </ul>
         </nav>
-        <div className="flex space-x-4">
+        <div className="flex items-center space-x-4">
           <ShoppingCart className="h-6 w-6 cursor-pointer" />
           <ul className="flex">{navLinks}</ul>
         </div>
