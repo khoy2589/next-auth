@@ -9,6 +9,8 @@ import ContactTextarea from "./components/ContactTextarea";
 
 import { Mail, MessageSquare, MessageSquareText } from "lucide-react";
 
+import Link from "next/link";
+
 const contact = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -50,10 +52,33 @@ const contact = () => {
                 form below to send us a message, and we'll get back to you as
                 soon as possible.
               </p>
+
               <div className="flex items-center text-green-600">
                 <Mail className="h-6 w-6 mr-2" />
                 <span>6431503131@lamduan.mfu.ac.th</span>
               </div>
+            </div>
+            <div className="bg-white p-6 mt-4 rounded-lg shadow-md">
+              {/* <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <div className="flex items-center mb-4 text-blue-600 ">
+                  {isHovered ? (
+                    <MessageSquareText className="h-6 w-6 mr-2 transition-all duration-300 transform hover:scale-110 animate-bounce" />
+                  ) : (
+                    <MessageSquare className="h-6 mr-2 transition-all duration-300 transform hover:scale-110" />
+                  )}
+                  <span>I'd love to hear from you!</span>
+                </div>
+              </a> */}
+
+              <Link href="/mydetails" className="hover:text-gray-300">
+                My Details
+              </Link>
             </div>
           </div>
           <div className="md:w-1/2">

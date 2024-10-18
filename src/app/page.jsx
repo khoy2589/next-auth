@@ -5,6 +5,7 @@
 import { useSession } from "next-auth/react";
 
 import IndexPage from "./indexpage/Index_page";
+import Typed from "typed.js";
 
 const Index = () => {
   const { data: session, status } = useSession(); // Example of using useSession

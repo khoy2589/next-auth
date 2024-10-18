@@ -1,5 +1,6 @@
 import React from "react";
 import { Slider } from "../components/ui/slider";
+import PriceRange from "./ui/pricerange";
 import {
   Select,
   SelectContent,
@@ -83,7 +84,7 @@ const GameFilter = () => {
             </SelectContent>
           </Select>
         </div>
-        <div>
+        {/* <div>
           <label className="block text-md font-medium text-gray-700 mb-4">
             Price Range
           </label>
@@ -93,7 +94,8 @@ const GameFilter = () => {
             max={100}
             step={1}
           />
-        </div>
+        </div> */}
+        <PriceRange />
       </div>
     </div>
   );
