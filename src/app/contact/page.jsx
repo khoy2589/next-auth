@@ -1,8 +1,7 @@
 "use client"; // Add this line to mark the component as a Client Component
 import React, { useState } from "react";
 
-import ContactHeader from "./components/ContactHeader";
-// import NavbarGame from "@/app/components/Navbar_game";
+import NavbarGame from "@/app/components/Navbar_game";
 import ContactButton from "./components/ContactButton";
 import ContactInput from "./components/ContactInput";
 import ContactTextarea from "./components/ContactTextarea";
@@ -22,7 +21,7 @@ const contact = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <ContactHeader />
+      <NavbarGame />
       <main className="container mx-auto px-4 py-8">
         <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
@@ -32,7 +31,7 @@ const contact = () => {
                 Send a Message to Me
               </h3>
               <a
-                href="https://www.google.com"
+                href="https://www.facebook.com/TaleNoTale/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => setIsHovered(true)}

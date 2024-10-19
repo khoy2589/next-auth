@@ -2,6 +2,7 @@ import React from "react";
 import Navbar_game from "@/app/components/Navbar_game";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+// import "../../../public/assets/cover/undergo.png";
 import {
   Avatar,
   AvatarImage,
@@ -10,24 +11,28 @@ import {
 
 const teamMembers = [
   {
+    id: 1,
     name: "Chanathip Khamchan",
     role: "CEO & Founder",
-    image: "/placeholder.svg",
+    image: "",
   },
   {
+    id: 2,
     name: "Chanathip Khamchan 2",
     role: "Lead Developer",
-    image: "/placeholder.svg",
+    image: "",
   },
   {
+    id: 3,
     name: "Chanathip Khamchan 3",
     role: "UX Designer",
-    image: "/placeholder.svg",
+    image: "",
   },
   {
+    id: 4,
     name: "Chanathip Khamchan 4",
     role: "Marketing Manager",
-    image: "/placeholder.svg",
+    image: "",
   },
 ];
 
@@ -83,12 +88,15 @@ const about = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member, index) => (
               <Card
-                key={index}
+                key={member.id}
                 className="hover:shadow-lg transition-shadow duration-300"
               >
                 <CardContent className="flex flex-col items-center p-6">
                   <Avatar className="w-24 h-24 mb-4">
-                    <AvatarImage src={member.image} alt={member.name} />
+                    <AvatarImage
+                      src={member.image || "/assets/cover/undergo.png"}
+                      alt={member.name}
+                    />
                     <AvatarFallback>
                       {member.name
                         .split(" ")

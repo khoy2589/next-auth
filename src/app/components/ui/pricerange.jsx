@@ -21,27 +21,29 @@ const PriceRange = () => {
   };
 
   return (
-    <div className="space-y-4">
-      <Slider
-        defaultValue={price}
-        max={100}
-        step={1}
-        onValueChange={setPrice}
-        className="w-full [&_[role=slider]]:bg-gradient-to-r [&_[role=slider]]:from-[var(--start-color)] [&_[role=slider]]:to-[var(--end-color)] [&_[role=slider]]:border-2 [&_[role=slider]]:border-white [&_[role=slider]]:shadow-lg [&_[role=slider]]:shadow-[var(--start-color)] [&_[role=slider]:last-of-type]:shadow-[var(--end-color)] [&_.range]:bg-gradient-to-r [&_.range]:from-[var(--start-color)] [&_.range]:to-[var(--end-color)] [&_[data-orientation=horizontal]]:h-2 [&_[data-orientation=horizontal]]:bg-gray-200"
-        style={sliderStyle}
-      />
+    <div>
+      <div className="space-y-4 ">
+        <Slider
+          defaultValue={price}
+          max={100}
+          step={1}
+          onValueChange={setPrice}
+          className="w-full [&_[role=slider]]:bg-gradient-to-r [&_[role=slider]]:from-[var(--start-color)] [&_[role=slider]]:to-[var(--end-color)] [&_[role=slider]]:border-2 [&_[role=slider]]:border-white [&_[role=slider]]:shadow-lg [&_[role=slider]]:shadow-[var(--start-color)] [&_[role=slider]:last-of-type]:shadow-[var(--end-color)] [&_.range]:bg-gradient-to-r [&_.range]:from-[var(--start-color)] [&_.range]:to-[var(--end-color)] [&_[data-orientation=horizontal]]:h-2 [&_[data-orientation=horizontal]]:bg-gray-200"
+          style={sliderStyle}
+        />
+      </div>
       <div className="flex justify-between">
         <span
           className="text-sm font-medium"
           style={{ color: getColor(price[0]) }}
         >
-          ${price[0]}
+          $ {price[0]}
         </span>
         <span
           className="text-sm font-medium"
           style={{ color: getColor(price[1]) }}
         >
-          ${price[1]}
+          $ {price[1]}
         </span>
       </div>
     </div>
