@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import PropTypes from "prop-types"; // Import PropTypes
 
 const Card = React.forwardRef(({ className, ...props }, ref) => (
   <div
@@ -12,6 +13,12 @@ const Card = React.forwardRef(({ className, ...props }, ref) => (
   />
 ));
 Card.displayName = "Card";
+
+// Add prop valication
+Card.propTypes = {
+  className: PropTypes.string,
+  props: PropTypes.object,
+};
 
 const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
   <div

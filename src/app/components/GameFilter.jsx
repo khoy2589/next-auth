@@ -98,8 +98,8 @@ const GameFilter = () => {
         <div>
           <label className=" block text-md font-medium text-gray-700 mb-1">
             Price range naja
+            <PriceRange />
           </label>
-          <PriceRange />
         </div>
       </div>
     </div>

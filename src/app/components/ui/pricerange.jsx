@@ -21,7 +21,7 @@ const PriceRange = () => {
   };
 
   return (
-    <div>
+    <div className="pt-4">
       <div className="space-y-4 ">
         <Slider
           defaultValue={price}
