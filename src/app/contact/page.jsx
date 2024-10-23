@@ -39,9 +39,9 @@ const contact = () => {
               >
                 <div className="flex items-center mb-4 text-blue-600 ">
                   {isHovered ? (
-                    <MessageSquareText className="h-6 w-6 mr-2 transition-all duration-300 transform hover:scale-110 animate-bounce" />
+                    <MessageSquareText className="MessageSquare animate-bounce" />
                   ) : (
-                    <MessageSquare className="h-6 mr-2 transition-all duration-300 transform hover:scale-110" />
+                    <MessageSquare className="MessageSquare" />
                   )}
                   <span>I'd love to hear from you!</span>
                 </div>
@@ -80,7 +80,7 @@ const contact = () => {
               </Link>
             </div>
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 ">
             <form
               onSubmit={handleSubmit}
               className="bg-white p-6 rounded-lg shadow-md"

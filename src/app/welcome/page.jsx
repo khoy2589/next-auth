@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-// import Navbar from "../components/Navbar";
 import NavbarGame from "../components/Navbar_game";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
@@ -17,8 +16,6 @@ function WelcomePage() {
   const { data: session, status } = useSession();
   console.log(session);
 
-  //   const { data: session, status } = useSession();
-
   //   if (status === "loading") {
   //     return <div>Loading...</div>;
   //   }
@@ -31,16 +28,13 @@ function WelcomePage() {
   //       </>
   //     );
   //   }
+
   status === "loading" ? (
     <>loading...</>
   ) : (
     <>Please log in to access the content.</>
   );
 
-  /* <div>Welcome, {session.user?.name || "User"}!</div> */
-
-  /* <h1>Welcome to the Index Page</h1>
-      <p>This is the main landing page of your application.</p> */
   !session ? redirect("/login") : IndexPage;
 
   return (
@@ -51,7 +45,7 @@ function WelcomePage() {
           <div className="md:flex place-items-center">
             <div className="md:flex-shrink-0">
               <Image
-                className="pl-4 h-48 w-full object-cover md:w-48"
+                className="pl-4 h-48 w-full object-cover md:w-52"
                 src={session.user.image || default_avatar}
                 alt={session.user.name}
                 width={192}
@@ -75,11 +69,7 @@ function WelcomePage() {
                 <li>บักเยอะกว่าโค้ดอีกครับ</li>
               </ul>
               <div className="mt-8">
-                <Link
-                  href="/"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
-                  passHref
-                >
+                <Link href="/" className="ExploreStore" passHref>
                   สำรวจร้านค้า
                 </Link>
               </div>

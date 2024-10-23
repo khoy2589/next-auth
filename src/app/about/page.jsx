@@ -9,6 +9,8 @@ import {
   AvatarFallback,
 } from "@/app/contact/components/Avatar";
 
+import Link from "next/link";
+
 const teamMembers = [
   {
     id: 1,
@@ -135,12 +137,14 @@ const about = () => {
           <h2 className="text-2xl font-semibold mb-4">
             Ready to Start Your Gaming Journey?
           </h2>
-          <Button
-            size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white"
-          >
-            Explore Our Games
-          </Button>
+          <Link href="/">
+            <Button
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Explore Our Games
+            </Button>
+          </Link>
         </section>
 
         {/* Contact Information */}
@@ -149,9 +153,11 @@ const about = () => {
           <p className="text-lg mb-4">
             Have questions? We'd love to hear from you!
           </p>
-          <Button variant="outline" size="lg" className="bg-white">
-            Contact Us
-          </Button>
+          <Link href="/contact">
+            <Button variant="outline" size="lg" className="bg-white">
+              Contact Us
+            </Button>
+          </Link>
         </section>
       </main>
     </div>

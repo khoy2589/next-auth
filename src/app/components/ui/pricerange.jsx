@@ -28,7 +28,7 @@ const PriceRange = () => {
           max={100}
           step={1}
           onValueChange={setPrice}
-          className="w-full [&_[role=slider]]:bg-gradient-to-r [&_[role=slider]]:from-[var(--start-color)] [&_[role=slider]]:to-[var(--end-color)] [&_[role=slider]]:border-2 [&_[role=slider]]:border-white [&_[role=slider]]:shadow-lg [&_[role=slider]]:shadow-[var(--start-color)] [&_[role=slider]:last-of-type]:shadow-[var(--end-color)] [&_.range]:bg-gradient-to-r [&_.range]:from-[var(--start-color)] [&_.range]:to-[var(--end-color)] [&_[data-orientation=horizontal]]:h-2 [&_[data-orientation=horizontal]]:bg-gray-200"
+          className="PriceRange"
           style={sliderStyle}
         />
       </div>
