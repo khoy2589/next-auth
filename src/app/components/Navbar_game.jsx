@@ -58,7 +58,10 @@ function NavbarGame() {
         </li>
         <li className="mx-3">
           <Button
-            onClick={() => signOut({ callbackUrl: "/" })}
+            onClick={() => {
+              sessionStorage.clear();
+              signOut({ callbackUrl: "/" });
+            }}
             className="bg-gradient-to-r from-red-700 via-red-600 to-red-500 text-white py-2 px-3 rounded-md cursor-pointer"
           >
             Logout

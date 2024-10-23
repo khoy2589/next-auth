@@ -84,17 +84,6 @@ const GameFilter = () => {
             </SelectContent>
           </Select>
         </div>
-        {/* <div>
-          <label className="block text-md font-medium text-gray-700 mb-4">
-            Price Range
-          </label>
-          <Slider
-            className="px-4 "
-            defaultValue={[0, 100]}
-            max={100}
-            step={1}
-          />
-        </div> */}
         <div>
           <label className=" block text-md font-medium text-gray-700 mb-1">
             Price range naja
