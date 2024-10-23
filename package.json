@@ -10,6 +10,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.5",
     "@radix-ui/react-avatar": "^1.1.1",
     "@radix-ui/react-context": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",

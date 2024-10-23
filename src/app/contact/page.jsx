@@ -1,5 +1,6 @@
 "use client"; // Add this line to mark the component as a Client Component
 import React, { useState } from "react";
+import Alert from "@mui/material/Alert";
 
 import NavbarGame from "@/app/components/Navbar_game";
 import ContactButton from "./components/ContactButton";
@@ -12,11 +13,14 @@ import Link from "next/link";
 
 const contact = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertSeverity, setAlertSeverity] = useState("success");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
     console.log("Form submitted");
+    setShowAlert(true); // Trigger the alert
   };
 
   return (
@@ -133,6 +137,22 @@ const contact = () => {
                 >
                   Send Message
                 </ContactButton>
+
+                {/* Display different alerts based on severity */}
+                {showAlert && (
+                  <Alert severity="success">
+                    This is a success alert. (แต่ส่งไปไหนไม่รู้นะ)
+                  </Alert>
+                )}
+                {showAlert && alertSeverity === "info" && (
+                  <Alert severity="info">This is an info alert.</Alert>
+                )}
+                {showAlert && alertSeverity === "warning" && (
+                  <Alert severity="warning">This is a warning alert.</Alert>
+                )}
+                {showAlert && alertSeverity === "error" && (
+                  <Alert severity="error">This is an error alert.</Alert>
+                )}
               </div>
             </form>
           </div>

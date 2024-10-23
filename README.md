@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+## Do `npm i`
+
 # in case icon didn't show or appear global grey press CTRL + SHIFT + R
 
 ## You can start dev on fist landing page which is pags.jsx in app folder
